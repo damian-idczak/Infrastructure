@@ -9,16 +9,17 @@ jenkins:
       permissions:
         - "Overall/Administer:panda"
   numExecutors: 0
+
 credentials:
   system:
     domainCredentials:
-      - credentials:
-        - usernamePassword:
+    - credentials:
+      - usernamePassword:
           id: "artifactory"
           username: "admin"
-          password: "passoword"
+          password: "password"
           scope: GLOBAL
-        - basicSSHUserPrivateKey:
+      - basicSSHUserPrivateKey:
           id: "jenkins_agent"
           username: "jenkins"
           privateKeySource:
